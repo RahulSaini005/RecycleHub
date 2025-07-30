@@ -1,0 +1,164 @@
+ body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+         background: linear-gradient(135deg, #e9fff2, #b7eac5);
+    }
+
+
+/* Navbar */
+nav {
+    margin-top: 50px;
+  padding: 20px 0;
+    width: 100%;
+  background: transparent;
+  animation: navSlideIn 1s ease forwards;
+  animation-delay: 0.3s;
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.navbar a {
+  color:#4b4b4b;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background-color: #1b5e20;
+  transition:width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar a:hover {
+    color: #1b5e20;
+
+}
+
+
+    .pickup-section {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 50px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-container {
+      flex: 1 1 400px;
+      max-width: 500px;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 30px;
+      margin-right: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      margin-top: 0;
+      font-size: 28px;
+      color: #2e7d32;
+    }
+
+    .form-container p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    input[type="file"] {
+      padding: 8px;
+    }
+
+    .btn {
+      background-color: #43a047;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #2e7d32;
+    }
+ 
+    .image-side {
+      flex: 1 1 300px;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .image-side img {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 10px;
+      mix-blend-mode: multiply;
+      background: transparent;
+    }
+
+    .confirmation {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+      color: green;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .pickup-section {
+        flex-direction: column;
+      }
+      .form-container {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+
+
+
+    
+/* NAVBAR Animation (Slide Down on Load) */
+@keyframes navSlideIn {
+  0% {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

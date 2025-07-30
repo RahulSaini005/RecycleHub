@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pickup Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet"  href="css/pickup.css" />
+</head>
+<script src="app.js"></script>
+
+<body>
+
+
+  <!-- Navbar --><div class="fade-in-up">
+  <nav>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="pickup.html">Pickup</a>
+      <a href="products.html">Products</a>
+      <a href="about.html" target="_self">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+  </div>
+
+
+
+
+<div class="pickup-section">
+
+  <div class="form-container">
+    <h2>♻️ Schedule a Pickup</h2>
+    <p>We’ll collect your waste from your doorstep and give it a new life.</p>
+    <form id="pickupForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="text" name="phone" placeholder="Phone Number" required />
+      <input type="text" name="address" placeholder="Pickup Address" required />
+      <select name="wasteType" required>
+        <option value="">Select Waste Type</option>
+        <option value="Plastic">Plastic</option>
+        <option value="E-Waste">E-Waste</option>
+        <option value="Organic">Organic</option>
+        <option value="Glass">Glass</option>
+      </select>
+      <select name="timeSlot">
+        <option value="">Preferred Time Slot</option>
+        <option>9AM - 12PM</option>
+        <option>12PM - 3PM</option>
+        <option>3PM - 6PM</option>
+      </select>
+      <input type="file" name="wasteImage" accept="image/*" />
+      <button type="submit" class="btn">Book Pickup Now</button>
+    </form>
+    <div class="confirmation" id="confirmationMsg">✅ Thank you! Pickup scheduled.</div>
+  </div>
+
+  
+  <div class="image-side">
+    <!-- <img src ="green-pickup-truck-cab-car-steel-grating-front-side-back-view-transport-vector-illustration-eps-143113808.webp" alt="Eco pickup illustration" >
+    <img src="istockphoto-1393527050-612x612.jpg" alt="recycling image">  -->
+    <img src="images/Screenshot 2025-07-30 160932.png" alt="truck">
+    
+  </div>
+</div>
+
+
+
+</body>
+</html>
+
+
+
+<script src="script.js"></script>

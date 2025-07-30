@@ -1,0 +1,167 @@
+
+
+    
+    body {
+      font-family: 'Segoe UI', sans-serif;
+           background: linear-gradient(135deg, #e9fff2, #b7eac5);
+      margin: 0;
+      padding: 0;
+    }
+
+/* Navbar */
+nav {
+    margin-top: 50px;
+  padding: 20px 0;
+    width: 100%;
+  background: transparent;
+  animation: navSlideIn 1s ease forwards;
+  animation-delay: 0.3s;
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.navbar a {
+  color:#4b4b4b;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background-color: #1b5e20;
+  transition:width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar a:hover {
+    color: #1b5e20;
+
+}
+
+
+
+
+.contact-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.contact-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2b5c2b;
+  margin-bottom: 30px;
+}
+
+.contact-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.contact-form,
+.contact-info {
+  flex: 1 1 400px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #155e1e;
+}
+
+.contact-form label {
+  margin: 10px 0 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+  resize: none;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2ecc71;
+  outline: none;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background-color: #2b7a2b;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #246b24;
+}
+
+.contact-info h2 {
+  color: #2b5c2b;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-box {
+    flex-direction: column;
+  }
+}
+
+
+
+/* NAVBAR Animation (Slide Down on Load) */
+@keyframes navSlideIn {
+  0% {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
